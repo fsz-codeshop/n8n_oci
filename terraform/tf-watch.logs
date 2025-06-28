@@ -1,0 +1,126 @@
+[0m[1mdata.oci_identity_region_subscriptions.home_region_subscriptions: Reading...[0m[0m
+[0m[1mdata.oci_objectstorage_namespace.ns: Reading...[0m[0m
+[0m[1mdata.oci_identity_tenancy.this: Reading...[0m[0m
+[0m[1mdata.oci_objectstorage_namespace.ns: Read complete after 0s [id=ObjectStorageNamespaceDataSource-958343382][0m
+[0m[1moci_objectstorage_bucket.terraform_state: Refreshing state... [id=n/gryydpwcqj5q/b/terraform-state][0m
+[0m[1mdata.oci_identity_region_subscriptions.home_region_subscriptions: Read complete after 0s [id=IdentityRegionSubscriptionsDataSource-958343382][0m
+[0m[1mdata.oci_identity_tenancy.this: Read complete after 1s [id=ocid1.tenancy.oc1..aaaaaaaa3p6sersiimd5q45we7f6tvei6hwfq2kc4mgmxcrs5mqxj6khhgbq][0m
+[0m[1mdata.oci_identity_availability_domains.ads: Reading...[0m[0m
+[0m[1mdata.oci_core_images.ubuntu: Reading...[0m[0m
+[0m[1moci_core_virtual_network.n8n_vcn: Refreshing state... [id=ocid1.vcn.oc1.sa-saopaulo-1.amaaaaaaxu3fwnyatqg3msgzojkmlvhxnah5no346g7lxit2ddevfieptotq][0m
+[0m[1mdata.oci_identity_availability_domains.ads: Read complete after 0s [id=IdentityAvailabilityDomainsDataSource-958343382][0m
+[0m[1mdata.oci_core_images.ubuntu: Read complete after 0s [id=CoreImagesDataSource-372659178][0m
+[0m[1moci_core_internet_gateway.n8n_igw: Refreshing state... [id=ocid1.internetgateway.oc1.sa-saopaulo-1.aaaaaaaa2awerb4iofieigix2la2tb5gjzddw6bsdfu6ypk5epzzs57exlza][0m
+[0m[1moci_core_security_list.n8n_security: Refreshing state... [id=ocid1.securitylist.oc1.sa-saopaulo-1.aaaaaaaabxgwv2alxjrxytszq7aoz3xk2vfm5jncj4hyqxqyrhxnfsgrt4sa][0m
+[0m[1moci_core_route_table.n8n_route_table: Refreshing state... [id=ocid1.routetable.oc1.sa-saopaulo-1.aaaaaaaazpccdxafxpeaaynsdwxrb2b6frg3sqlqigghtnbce5sxm5kyvf6q][0m
+[0m[1moci_core_subnet.n8n_subnet: Refreshing state... [id=ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaak3fzg6h7b23tspwv7cggreudnt2wewjb5jkqd6js7ap6ynwzsvpa][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # oci_core_instance.n8n_instance[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_instance" "n8n_instance" {
+      [32m+[0m[0m availability_domain                 = "ntoJ:SA-SAOPAULO-1-AD-1"
+      [32m+[0m[0m boot_volume_id                      = (known after apply)
+      [32m+[0m[0m capacity_reservation_id             = (known after apply)
+      [32m+[0m[0m compartment_id                      = "ocid1.tenancy.oc1..aaaaaaaa3p6sersiimd5q45we7f6tvei6hwfq2kc4mgmxcrs5mqxj6khhgbq"
+      [32m+[0m[0m compute_cluster_id                  = (known after apply)
+      [32m+[0m[0m dedicated_vm_host_id                = (known after apply)
+      [32m+[0m[0m defined_tags                        = (known after apply)
+      [32m+[0m[0m display_name                        = "n8n-instance"
+      [32m+[0m[0m extended_metadata                   = (known after apply)
+      [32m+[0m[0m fault_domain                        = (known after apply)
+      [32m+[0m[0m freeform_tags                       = (known after apply)
+      [32m+[0m[0m hostname_label                      = (known after apply)
+      [32m+[0m[0m id                                  = (known after apply)
+      [32m+[0m[0m image                               = (known after apply)
+      [32m+[0m[0m instance_configuration_id           = (known after apply)
+      [32m+[0m[0m ipxe_script                         = (known after apply)
+      [32m+[0m[0m is_cross_numa_node                  = (known after apply)
+      [32m+[0m[0m is_pv_encryption_in_transit_enabled = (known after apply)
+      [32m+[0m[0m launch_mode                         = (known after apply)
+      [32m+[0m[0m metadata                            = {
+          [32m+[0m[0m "ssh_authorized_keys" = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCe6NPzSJ2mOL6NY38HLv8k1Pc51s6JNeTns/YHqVNF0IE22TpaG5CPFpnqPSsUYZMgmxHQErSqo+vxnM0eBUkm4KCJrQ6GjdxL3p0vj7z6QP8dKbBwT5UoogZ1jw4ujuC21EjJfZrqbSKqvr5rdiKWuHJl869P/xdVS5G3pT72F5eW7X/2eIig7WkTf30doKt22xdFkIElfskIa3icQg/wuM5hBvoKfmzsTzcQQk4TIg/NVWeTASmzJWRne6SduwdZrC5QnCbRHHIhFeEwgJZTPInVdjAHpWWmRA+r/mfxvDf270ave7yPgIfWnEoBA68433FdBsvMxBrnKZPycu7P n8n-hetzner-rsa-key-20250605"
+          [32m+[0m[0m "user_data"           = "IyEvYmluL2Jhc2gKc2V0IC1ldW8gcGlwZWZhaWwKCiMgRW5zdXJlIGFsbCBmaWxlcyBhcmUgY3JlYXRlZCBpbiB0aGUgdXNlcidzIGhvbWUgZGlyZWN0b3J5CmNkICIkSE9NRSIKCiMgSW5zdGFsbCBEb2NrZXIgYW5kIERvY2tlciBDb21wb3NlCnN1ZG8gYXB0IHVwZGF0ZSAmJiBzdWRvIGFwdCBpbnN0YWxsIC15IGNhLWNlcnRpZmljYXRlcyBjdXJsIGdudXBnIGxzYi1yZWxlYXNlCmN1cmwgLWZzU0wgaHR0cHM6Ly9kb3dubG9hZC5kb2NrZXIuY29tL2xpbnV4L3VidW50dS9ncGcgfCBzdWRvIGdwZyAtLWRlYXJtb3IgLW8gL3Vzci9zaGFyZS9rZXlyaW5ncy9kb2NrZXItYXJjaGl2ZS1rZXlyaW5nLmdwZwplY2hvIFwKICAiZGViIFthcmNoPSQoZHBrZyAtLXByaW50LWFyY2hpdGVjdHVyZSkgc2lnbmVkLWJ5PS91c3Ivc2hhcmUva2V5cmluZ3MvZG9ja2VyLWFyY2hpdmUta2V5cmluZy5ncGddIFwKICBodHRwczovL2Rvd25sb2FkLmRvY2tlci5jb20vbGludXgvdWJ1bnR1IFwKICAkKGxzYl9yZWxlYXNlIC1jcykgc3RhYmxlIiB8IHN1ZG8gdGVlIC9ldGMvYXB0L3NvdXJjZXMubGlzdC5kL2RvY2tlci5saXN0ID4gL2Rldi9udWxsCnN1ZG8gYXB0IHVwZGF0ZSAmJiBzdWRvIGFwdCBpbnN0YWxsIC15IGRvY2tlci1jZSBkb2NrZXItY2UtY2xpIGNvbnRhaW5lcmQuaW8KaWYgWyAtbiAiJHtVU0VSLX0iIF07IHRoZW4KICAgIHN1ZG8gdXNlcm1vZCAtYUcgZG9ja2VyICIkVVNFUiIKZmkKc3VkbyBjdXJsIC1MICJodHRwczovL2dpdGh1Yi5jb20vZG9ja2VyL2NvbXBvc2UvcmVsZWFzZXMvbGF0ZXN0L2Rvd25sb2FkL2RvY2tlci1jb21wb3NlLSQodW5hbWUgLXMpLSQodW5hbWUgLW0pIiAtbyAvdXNyL2xvY2FsL2Jpbi9kb2NrZXItY29tcG9zZQpzdWRvIGNobW9kICt4IC91c3IvbG9jYWwvYmluL2RvY2tlci1jb21wb3NlCg=="
+        }
+      [32m+[0m[0m private_ip                          = (known after apply)
+      [32m+[0m[0m public_ip                           = (known after apply)
+      [32m+[0m[0m region                              = (known after apply)
+      [32m+[0m[0m security_attributes                 = (known after apply)
+      [32m+[0m[0m security_attributes_state           = (known after apply)
+      [32m+[0m[0m shape                               = "VM.Standard.A1.Flex"
+      [32m+[0m[0m state                               = (known after apply)
+      [32m+[0m[0m subnet_id                           = (known after apply)
+      [32m+[0m[0m system_tags                         = (known after apply)
+      [32m+[0m[0m time_created                        = (known after apply)
+      [32m+[0m[0m time_maintenance_reboot_due         = (known after apply)
+
+      [32m+[0m[0m agent_config (known after apply)
+
+      [32m+[0m[0m availability_config (known after apply)
+
+      [32m+[0m[0m create_vnic_details {
+          [32m+[0m[0m assign_ipv6ip          = (known after apply)
+          [32m+[0m[0m assign_public_ip       = "true"
+          [32m+[0m[0m defined_tags           = (known after apply)
+          [32m+[0m[0m display_name           = (known after apply)
+          [32m+[0m[0m freeform_tags          = (known after apply)
+          [32m+[0m[0m hostname_label         = (known after apply)
+          [32m+[0m[0m nsg_ids                = (known after apply)
+          [32m+[0m[0m private_ip             = (known after apply)
+          [32m+[0m[0m security_attributes    = (known after apply)
+          [32m+[0m[0m skip_source_dest_check = (known after apply)
+          [32m+[0m[0m subnet_id              = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaak3fzg6h7b23tspwv7cggreudnt2wewjb5jkqd6js7ap6ynwzsvpa"
+          [32m+[0m[0m vlan_id                = (known after apply)
+
+          [32m+[0m[0m ipv6address_ipv6subnet_cidr_pair_details (known after apply)
+        }
+
+      [32m+[0m[0m instance_options (known after apply)
+
+      [32m+[0m[0m launch_options (known after apply)
+
+      [32m+[0m[0m launch_volume_attachments (known after apply)
+
+      [32m+[0m[0m licensing_configs (known after apply)
+
+      [32m+[0m[0m placement_constraint_details (known after apply)
+
+      [32m+[0m[0m platform_config (known after apply)
+
+      [32m+[0m[0m preemptible_instance_config (known after apply)
+
+      [32m+[0m[0m shape_config {
+          [32m+[0m[0m baseline_ocpu_utilization     = (known after apply)
+          [32m+[0m[0m gpu_description               = (known after apply)
+          [32m+[0m[0m gpus                          = (known after apply)
+          [32m+[0m[0m local_disk_description        = (known after apply)
+          [32m+[0m[0m local_disks                   = (known after apply)
+          [32m+[0m[0m local_disks_total_size_in_gbs = (known after apply)
+          [32m+[0m[0m max_vnic_attachments          = (known after apply)
+          [32m+[0m[0m memory_in_gbs                 = 4
+          [32m+[0m[0m networking_bandwidth_in_gbps  = (known after apply)
+          [32m+[0m[0m nvmes                         = (known after apply)
+          [32m+[0m[0m ocpus                         = 1
+          [32m+[0m[0m processor_description         = (known after apply)
+          [32m+[0m[0m vcpus                         = (known after apply)
+        }
+
+      [32m+[0m[0m source_details {
+          [32m+[0m[0m boot_volume_size_in_gbs = (known after apply)
+          [32m+[0m[0m boot_volume_vpus_per_gb = (known after apply)
+          [32m+[0m[0m source_id               = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaaudgw6yofj4sg3jtayqv6esvplp3rlxxoky3hnvg2pa5vadbzfmnq"
+          [32m+[0m[0m source_type             = "image"
+
+          [32m+[0m[0m instance_source_image_filter_details (known after apply)
+        }
+    }
+
+[1mPlan:[0m 1 to add, 0 to change, 0 to destroy.
+[0m
+Changes to Outputs:
+  [32m+[0m[0m n8n_public_ip                    = (known after apply)
+[0m[1moci_core_instance.n8n_instance: Creating...[0m[0m

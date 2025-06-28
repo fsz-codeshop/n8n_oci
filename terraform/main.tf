@@ -130,7 +130,7 @@ resource "oci_core_instance" "n8n_instance" {
 
   metadata = {
     ssh_authorized_keys = var.ssh_public_key
-    user_data           = filebase64("${path.module}/../scripts/install_n8n.sh")
+    user_data           = filebase64("${path.module}/../scripts/install_docker.sh")
   }
 }
 
